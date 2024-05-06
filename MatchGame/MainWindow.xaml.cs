@@ -8,17 +8,13 @@ using System.Windows.Threading;
 
 namespace MatchGame
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        DispatcherTimer dispatcherTimer = new DispatcherTimer();
-        int tenthOfSecondsElapsed;
-        int matchesFound;
-
-        TextBlock lastTextBlockClicked;
-        bool findingMatch = false;
+        private readonly DispatcherTimer dispatcherTimer = new();
+        private int tenthOfSecondsElapsed;
+        private int matchesFound;
+        private TextBlock lastTextBlockClicked;
+        private bool findingMatch;
 
         public MainWindow()
         {
